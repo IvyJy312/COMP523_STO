@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 ws.onopen = function(){
-    setTitle('Connected to Mainscreen');
+    setTitle('');
 };
 
 ws.onclose = function(){
