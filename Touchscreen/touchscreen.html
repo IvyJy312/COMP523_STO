@@ -7,57 +7,61 @@
 
 <body>
 <h1> Touch Screen</h1>
+<div id="toolPanel">
 
-<div>
-  <button  class='type' id='bug_resistance' >
+</div>
+<div class="wrapper">
+  <button  class='type button' id='bug_resistance' >
     Bug resistance
   </button>
 
-  <button  class='type' id='ins_resistance' >
+  <button  class='type button' id='ins_resistance' >
     Insecticide resistance
   </button>
-</div>
 
-<div class='row '>
-  <button type='button' class='col-6' id='confirm' >
+
+<section class='row '>
+  <button type='button ' class='col-6 lined thin' id='confirm' >
     Confirm
     <!--short term-->
   </button>
-</div>
+</section>
 
-<div class='row '>
-  <button type='button'  class='col-6' id='bug_rep' >
+<section class='row '>
+  <button type='button'  class='col-6 lined thin' id='bug_rep' >
     Bug Repellent
     <!--short term-->
   </button>
 
-  <button type='button' class='col-6' id='insecticide'>
+  <button type='button' class='col-6 lined thin' id='insecticide'>
     Insecticide
     <!--short term, no for insecticide-resistance-->
   </button>
-</div>
+</section>
 
-<div class='row'>
-  <button type='button' class='col-6' id='gen_modi_mos'>
+<section class='row'>
+  <button type='button' class='col-6 lined thin' id='gen_modi_mos'>
     Genetic Mosquitos
     <!--long term ?? short term-->
   </button>
 
-  <button type='button' class='col-6' id='bed_netting'>
+  <button type='button' class='col-6 lined thin' id='bed_netting'>
     Bed Netting
   </button>
-</div>
+</section>
 
-<div class='row'>
-  <button type='button' class='col-6' id='vaccine_trial'>
+<section class='row'>
+  <button type='button' class='col-6 lined thin' id='vaccine_trial'>
     Vaccine Trial
     <!--long term-->
   </button>
 
-  <button type='button' class='col-6' id="anti_mal_medi">
+  <button type='button' class='col-6 lined thin' id="anti_mal_medi">
     Anti-malarial medication
     <!--short term, doesn't stop transmission, tread individual-->
   </button>
+</section>
+
 </div>
 </body>
 <script src='touchscreen.js'></script>

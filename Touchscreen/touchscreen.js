@@ -34,16 +34,135 @@ function addListeners(){
         elem.addEventListener("click" ,function(event){
             clicked_button_id=event.target.id;
             setColor(clicked_button_id);
+            updatePanel(clicked_button_id);
             confirmChosenTool(chose_tool_num);
             console.log(button_tracker);
-            if(chose_tool_num == 2 && button_tracker['confirm'] === true){
+            if(chose_tool_num == 2  ||button_tracker[clicked_button_id]==false){
                 sendMsg('playVideo');
             }
         })
     })
 }
 
-
+function updatePanel(clicked_button_id){
+    var panel = document.getElementById("toolPanel");
+    console.log(clicked_button_id);
+    panel.style.visibility='visible';
+    if(chose_tool_num==0 && panel.childNodes[1]!=null){
+        panel.removeChild(panel.childNodes[1]);
+    }
+    switch (clicked_button_id){
+        case 'bug_rep':
+            var div = document.createElement("div")
+            var price = document.createTextNode("Price: $10 ");
+            var newLine = document.createElement("br");
+            div.className="info";
+            var ratio = document.createTextNode("Impact ratio: ");
+            if(panel.childNodes[1]!=null){
+                panel.removeChild(panel.childNodes[1]);
+            }
+            div.appendChild(price);
+            div.appendChild(newLine);
+            div.appendChild(ratio);
+            panel.appendChild(div);
+            console.log(panel.childNodes[1]);
+            console.log(button_tracker[clicked_button_id]==false);
+            if(panel.childNodes[1]!=null && button_tracker[clicked_button_id]==false){
+                panel.removeChild(panel.childNodes[1]);
+            }
+            break;
+        case 'insecticide':
+            var div = document.createElement("div")
+            var price = document.createTextNode("Price: $15 ");
+            var newLine = document.createElement("br");
+            div.className="info";
+            var ratio = document.createTextNode("Impact ratio: ");
+            if(panel.childNodes[1]!=null){
+                panel.removeChild(panel.childNodes[1]);
+            }
+            div.appendChild(price);
+            div.appendChild(newLine);
+            div.appendChild(ratio);
+            panel.appendChild(div);
+            console.log(panel.childNodes[1]);
+            if(panel.childNodes[1]!=null && button_tracker[clicked_button_id]==false){
+                panel.removeChild(panel.childNodes[1]);
+            }
+            break;
+        case 'gen_modi_mos':
+            var div = document.createElement("div")
+            var price = document.createTextNode("Price: $100 ");
+            var newLine = document.createElement("br");
+            div.className="info";
+            var ratio = document.createTextNode("Impact ratio: ");
+            if(panel.childNodes[1]!=null){
+                panel.removeChild(panel.childNodes[1]);
+            }
+            div.appendChild(price);
+            div.appendChild(newLine);
+            div.appendChild(ratio);
+            panel.appendChild(div);
+            console.log(panel.childNodes[1]);
+            if(panel.childNodes[1]!=null && button_tracker[clicked_button_id]==false){
+                panel.removeChild(panel.childNodes[1]);
+            }
+            break;
+        case 'bed_netting':
+            var div = document.createElement("div")
+            var price = document.createTextNode("Price: $18 ");
+            var newLine = document.createElement("br");
+            div.className="info";
+            var ratio = document.createTextNode("Impact ratio: ");
+            if(panel.childNodes[1]!=null){
+                panel.removeChild(panel.childNodes[1]);
+            }
+            div.appendChild(price);
+            div.appendChild(newLine);
+            div.appendChild(ratio);
+            panel.appendChild(div);
+            console.log(panel.childNodes[1]);
+            if(panel.childNodes[1]!=null && button_tracker[clicked_button_id]==false){
+                panel.removeChild(panel.childNodes[1]);
+            }
+            break;
+        case 'vaccine_trial':
+            var div = document.createElement("div")
+            var price = document.createTextNode("Price: $30 ");
+            var newLine = document.createElement("br");
+            div.className="info";
+            var ratio = document.createTextNode("Impact ratio: ");
+            if(panel.childNodes[1]!=null){
+                panel.removeChild(panel.childNodes[1]);
+            }
+            div.appendChild(price);
+            div.appendChild(newLine);
+            div.appendChild(ratio);
+            panel.appendChild(div);
+            console.log(panel.childNodes[1]);
+            if(panel.childNodes[1]!=null && button_tracker[clicked_button_id]==false){
+                panel.removeChild(panel.childNodes[1]);
+            }
+            break;
+        case 'anti_mal_medi':
+            var div = document.createElement("div")
+            var price = document.createTextNode("Price: $25 ");
+            var newLine = document.createElement("br");
+            div.className="info";
+            var ratio = document.createTextNode("Impact ratio: ");
+            if(panel.childNodes[1]!=null){
+                panel.removeChild(panel.childNodes[1]);
+            }
+            div.appendChild(price);
+            div.appendChild(newLine);
+            div.appendChild(ratio);
+            panel.appendChild(div);
+            console.log(panel.childNodes[1]);
+            if(panel.childNodes[1]!=null && button_tracker[clicked_button_id]==false){
+                panel.removeChild(panel.childNodes[1]);
+            }
+            break;
+    }
+}
 
 function setTracker(){
     var elems = document.getElementsByClassName('col-6');
